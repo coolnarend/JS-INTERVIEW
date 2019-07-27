@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html spellcheck="true">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS - Concepts</title>
+    <meta name="description" content="A javascript interview questions collected from different sources" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="interview.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="interview.js"></script>
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>Test Your Self CSS3 ☎</h1>
+        </hgroup>
+    </header>
+            <!--CSS purpose-->
+            <div class="bigWord">What is the purpose of CSS?
+              <div class="defn">
+                It is used to describe presentation of a document which is written in SVG, HTML, XHTML or XML
+              </div>
+            </div>
+            <!--CSS3 new experience-->
+            <div class="bigWord">
+                What are the novelities of CSS3?
+                <div class="defn">
+                  The aim of CSS3 is to extend CSS2.1 and it has some existing features.
+                 Rounded corners, transition, animation, shadows, gradients are some of the new features.
+               </div>
+            </div>
+            <!--CSS3 modules-->
+            <div class="bigWord">
+                What are the modules and standardization process of CSS3?
+                <div class="defn">
+                  The standardization process of CSS is module by module.
+                                Modules under the catagory of candidate recommendation, proposed recommendation or recommendation are stable modules.
+                                These modules can be used with out prefix. For instance pseudo elements, pseudo classes, background, border
+              <br />Modules under refining phase are fairly stable. Though changes are still expected. CSS animations and CSS transitions are in this phase
+                            <br />
+                                Modules that are in the revising phase are much less stable than those in the refining phase.
+                                Often the syntax is still under scrutiny and may evolve a lot, in a non-compatible way.
+                                Alternative syntaxes are tested and often implemented.
+                            <br />
+                            There are also modules that are in exploring phase and rewriting phase
+                        </div>
+            </div>
+            <!--ID vs class-->
+            <div class="bigWord">What are the differences between ID's and Classes?
+              <div class="defn">
+                ID's are unique while classes are not unique. To stule multiple elements
+                use class.
+              </div>
+            </div>
+            <!--resetting and normalizing-->
+            <div class="bigWord">
+                What's the difference between "resetting" and "normalizing" CSS?
+                 Which would you choose, and why?
+                 <div class="defn">
+                   Normalize.css is a small CSS file that provides better cross-browser consistency in the default styling of HTML elements.
+                  It’s a modern, HTML5-ready, alternative to the traditional CSS reset.
+                 A CSS Reset (or “Reset CSS”) is a short, often compressed (minified) set of CSS rules that resets the styling of all.
+                 HTML elements to a consistent baseline. Using a CSS Reset, CSS authors can force every browser to have all its styles reset to null, thus avoiding cross-browser differences as much as possible.
+            </div>
+          </div>
+            <!--float in CSS3-->
+            <div class="bigWord">
+              What is float property in CSS3 and how they work?
+              <div class="defn">
+                The float property specifies whether or not an element should float.
+                It can be used to wrap text around images. .someClassNme{float:right;}
+              </div>
+            </div>
+            <!--z-index-->
+            <div class="bigWord">
+                Describe z-index and how stacking context is formed.
+                <div class="defn">
+                  The z-index property specifies the stack order of an element.
+                An element with greater stack order is always in front of an element with a lower stack order.
+              </div>
+            </div>
+            <!--BFC Block Formatting Context-->
+            <div class="bigWord">
+                Describe BFC(Block Formatting Context) and how it works.
+                <div class="defn"> A block formatting context is a part of a visual CSS rendering of a Web page.
+                It is the region in which the layout of block boxes occurs and in which floats interact with each other.
+              </div>
+            </div>
+            <!--float clearing techniques-->
+            <div class="bigWord">
+                What are the various clearing techniques and which is appropriate for what context?<div class="defn"> Clearing techniques are important because floated objects do not add to the height of the object that reside in properly. Adding clear:both</div>
+                <div class="defn">
+                  after the last floated object solves the entire problem.
+                </div>
+
+            </div>
+            <!--CSS Sprites-->
+            <div class="bigWord">
+                Explain CSS sprites, and how you would implement them on a page or site.
+                <div class="defn">
+                  Image sprites are used in numerous web apps where multiple images are used. Rather than include each image as a separate image file.
+                it is much more memory and bandwidth-friendly to send them as a single image, so the number of HTTP requests is reduced.
+                 CSS sprites is the technique of combing images to lessen the number of calls that need to be made to the server.
+                &lt;a id="download" href="#"&gt;Download Now CSS Spirites&lt;/a&gt;
+               </div>
+            </div>
+            <!--image replacement techniques-->
+            <div class="bigWord">
+              What are your favourite image replacement techniques and which do you use when?
+              <div class="defn">
+                CSS image replacement is a technique of replacing a text element (usually a header tag) with an image.
+              </div>
+            </div>
+            <!--fixing browser-specific styling issues?-->
+            <div class="bigWord">
+              How would you approach fixing browser-specific styling issues?
+              <div class="defn"><ul><li>
+                <dt>Prefix CSS3 styles like -moz-, -webkit-, -o-, -ms-</dt>
+                <dt>Use a reset</dt><dt>Avoid padding with widths</dt>
+              </li></ul>
+              </div>
+            </div>
+
+
+            <!--feature constrained browsers-->
+
+
+            <div class="bigWord">
+              How do you serve your pages for feature-constrained browsers?
+              <div class="defn">any one who can help me on this</div></div>
+
+
+            <!--visually hide content but not for screen readers-->
+
+
+            <div class="bigWord">
+                What are the different ways to visually hide content (and make it available only for screen readers)?
+                <div class="defn">
+
+                                By applying display:none you made inaccesible for screen readers. The best way is to make the value of top and left
+                                out of boundary Example .className {position:absolute; left:-9999px !important; top:-9999px !important;}
+
+                        </div>
+            </div>
+
+
+            <!--grid system-->
+
+
+            <div class="bigWord">
+                Describe grid system?
+                <div class="defn"> Grid is in W3 working draft stage and it is not supported by all browsers correctly. Example safari, ios, android.
+                 CSS Grid Layout (aka "Grid" ), is a two-dimensional grid-based layout system that aims to change the way we design grid-based user interfaces.
+                 CSS has always been used to lay out our web pages, but it's never done a very good job of it.
+                 First we used tables, then floats, positioning and inline-block, but all of these methods were essentially hacks and
+                 left out a lot of important functionality (vertical centering, for instance).
+                 Flexbox helped out, but it's intended for simpler one-dimensional layouts, not complex two-dimensional ones.
+                 (Flexbox and Grid actually work very well together).
+                 Grid is the very first CSS module created specifically to solve the layout problems we've all been hacking our way around.
+                 for as long as we've been making websites.
+               </div>
+            </div>
+
+
+            <!--media queries-->
+
+
+            <div class="bigWord">
+                Explain the implementation of media queries or mobile specific layouts/CSS.
+                <div class="defn">
+                  A media query implementation consists of an optional media type and zero or more expressions that limit the style sheets.
+                 scope by using media features, such as width, height, and color. The result of the query is true if the media type.
+                 specified in the media query matches the type of device the document is being displayed on and all expressions in the media query are true.</div>
+                 You can use logical operators Example @media (min-width 700px), handheld and (orientation landscape) { ...styles... }
+               </div>
+
+            </div>
+
+
+            <!--styling SVG-->
+
+
+            <div class="bigWord">
+                Are you familiar with styling SVG?
+                <div class="defn"> SVG (Scalable Vector Graphics) is an XML-based language for creating graphics.
+                It can be used for static images, and also for animations and user interfaces.
+                 Like other XML-based languages, SVG supports CSS stylesheets so that you can separate the style of a graphic from its content.
+                 The SVG document links the stylesheet in the usual way.
+                 SVG has its own CSS properties and values. Example fill, fillrule, stroke, stop-opacity, stop-color,clip-path, clip-rule.
+                 Some of them are similar to CSS properties for HTML. Example font, display, font-size
+               </div>
+            </div>
+
+
+            <!--webpage optimization for print-->
+
+
+            <div class="bigWord">How do you optimize your webpages for print?<div class="defn"> use media queries, bootsrtap</div></div>
+
+
+            <!--writing efficient CSS-->
+
+
+            <div class="bigWord">What are the best practices to write efficient CSS?<div class="defn"><dt>Avoid universal rules Example *{color:red}</dt><dt>Don't qualify ID rules with tag names or classes Example p#IDName</dt><dt>Don't qualify class rules with tag names Example div.className</dt><dt>Use the most specific catagory possible</dt><dt>Avoid the descendent selector</dt><dt>Rely on inheritance</dt><dt>Avoid vendor specific features unless necessary Example -moz- or -webkit-</dt></div></div>
+
+
+            <!--CSS preprocessors-->
+
+
+            <div class="bigWord">
+                Describe CSS preprocessors
+                <div class="defn"><ul><li>
+                            <dt>It is an extension of CSS.</dt>
+                            <dt>
+                                It is a separate stylesheet language with advanced features that developers can leverage to create leaner,
+                                faster products with more features while spending less time on the whole process than they would with plain CSS.
+                            </dt>
+                            <dt>
+                                They are fully compatible with CSS – in fact, they are normal CSS to the end user! As the name implies, these stylesheet languages
+                                are turned into normal CSS files, which are then displayed on the user’s computer.
+                                This solves both the development and the compatibility problems in one fell swoop – quite ingenious, isn’t it?
+                            </dt>
+                            <dt>
+                                The two most popular CSS preprocessors are LESS and SASS, though – they’re mature, well supported, have a clearly
+                                defined syntax that works well and they’re already used by millions of websites
+                            </dt></li></ul>
+                            <ul><li>
+                        <dt>Advantagesmore functionality, better design, fewer bugs, faster and with fewer expenses (since developers have to work less).
+                Other major advantages – nested syntax, variables, mixins, extends, a host of operational and mathematical functions,
+                as well as file concatenation, all of which add to a better development process, which results in better CSS
+                Mixins and extends also reduce the number of lines you need to write as a developer by providing reusable pieces of code and class inheritance –
+                no more typing the same parameters for every object on your site/app.
+</li></ul>
+                <ul><li><dt>Disadvantages</dt>need to learn and get used to a new language
+                It needs experience besides HTML and CSS, otherwise you may find yourself creating CSS files that are way larger than they should be
+                which directly affect load speed.
+
+                Setting up the CSS preprocessor requires some command line knowledge, and naturally it uses CPU time to run
+
+                code maintenance can be complicated when using a CSS preprocessor, even though one of their claimed advantages is making
+                code maintenance easier. It’s easy to use non-standard code with a preprocessor, and one property (in a separate location)
+                can affect multiple end files, so if there’s ever a problem, searching for the culprit can be a lot harder
+        </ul></li>    </div>
+</div>
+
+            <!--Web Design Comp-->
+
+
+            <div class="bigWord">
+                What is a web design comp? and How would you implement a web design comp that uses non-standard fonts?<div class="defn"> The purpose of the web design comp is to give the designers and stakeholders in the design process a way to see how the design will look,</div>
+                <div class="defn">
+                  without going through technical steps that are not necessary in the early stages of design.
+                 A web design comp might represent the graphical layout of a full website, a page or a banner.
+                The graphic layout is separate from the web coding. Some web designers focus on writing the code that
+                makes the web site technically ready for the internet, but the comp represents what the final site will be visually.
+                 A comp of a large web site might include many separate pages. It allows the designers to make decisions about how they direct
+                 users to navigate through the site.
+               </div>
+            </div>
+            <!--CSS Selector and browser-->
+            <div class="bigWord">
+                Explain how a browser determines what elements match a CSS selector.
+                <div class="defn">
+               CSS Selectors are matched by browser engines from right to left.
+                So they first find the children and then check their parents to see
+                if they match the rest of the parts of the rule.
+              </div>
+            </div>
+
+
+            <!--pseudo classes-->
+            <div class="bigWord">
+                Describe pseudo-classes and discuss what they are used for.
+                <div class="defn">
+                  A pseudo-class is used to define a special state of an element.
+                  Some uses of pseudo-class.
+                  Style an element when a user mouses over it
+                Style visited and unvisited links differently
+                Style an element when it gets focus
+
+                <code>
+                    selector:pseudo-class { property:value; }
+                    a:link {color:red; } or div:hover p { display: block; }
+                </code>
+            </div></div>
+
+
+            <!--pseudo elements-->
+
+
+            <div class="bigWord">
+                Describe pseudo-elements and discuss what they are used for.
+                <div class="defn">
+                  A CSS pseudo-element is used to style specified parts of an element. :after, :before, :first-letter, :first-line, :selection
+                <code>
+                    selector::pseudo-element { property:value; }
+                    p::first-line {color:red; }
+                </code>
+                </div>
+            </div>
+            <!--box model-->
+            <div class="bigWord">
+                Explain your understanding of the box model and how you would tell the browser
+                 in CSS to render your layout in different box models.
+                 <div class="defn">
+                   All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.
+                   The CSS box model is essentially a box that wraps around every HTML element.
+                     It consists of margins, borders, padding, and the actual content.
+                      When you set the width and height properties of an element with CSS, you just set the width and height of the content area.
+                To calculate the full size of an element, you must also add padding, borders and margins.</div>
+            </div>
+            <!--box-sizing-->
+            <div class="bigWord">
+                What does * { box-sizing: border-box; } do? What are its advantages?
+                <div class="defn">
+                 When you set box-sizing border-box; on an element, the padding and border of that element no longer increase its width.
+                The width and height properties (and min/max properties) includes content, padding and border, but not the margin.
+            The box-sizing property can make building CSS layouts easier and a lot more intuitive. It is in experimental.
+             The box-sizing property is used to alter the default CSS box model used to calculate width and height of the elements.
+            It is possible to use this property to emulate the behavior of browsers that do not correctly support the CSS box model specification.
+          </div>
+            </div>
+
+
+
+    </article>
+</body>
+</html>

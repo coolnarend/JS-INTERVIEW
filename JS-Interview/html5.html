@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html>
+<html spellcheck="true">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript Interview Questions</title>
+    <meta name="description" content="A javascript interview questions collected from different sources" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="interview.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="interview.js"></script>
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>Web Developer Interview Questions ☎</h1>
+        </hgroup>
+    </header>
+    <article>
+    <!--HTML5-->
+      <h1>HTML5 ☎</h1>
+      <!--new elements of html5-->
+       <div class="bigWord">
+                What are some new elements of html5?
+                <div class="defn">
+                    Semantic Elements: - header, article, section, footer,mark, fig, figcaption, data, time,
+                        output, progress, meter and main.
+                    <ul>Semantics is the study of the meanings of words and phrases in a language. Semantic elements = elements with a meaning.
+                    <li>attributes: - number, date, calendar, range</li>
+                    <li>graphic elements: - svg, canvas</li>
+                    <li>multimedia elements: - audio, video</li>
+                    </ul>
+                </div>
+            </div>
+      <!--doctype-->
+      <div class="bigWord">What does doctype do?
+            <div class="defn">
+            It is a preample for html5 and it tells browser what type of document expects i.e. html5
+            </div>
+            </div>
+      <!--forms new feature-->
+      <div class="bigWord">
+                Explain about the new features of forms in HTML5
+                <div class="defn">
+                    The forms features in HTML5 provide a better experience for users by making forms more consistent
+                    across different web sites and giving.  It gives immediate feedback to the user about data entry
+                </div>
+            </div>
+      <!--html5 motivations-->
+      <div class="bigWord">What were the key goals and motivations behind html5 specifications?
+            <div class="defn">
+                <ul>
+                    <li>better platform support (tablet, phone and PC)</li>
+                    <li>semantic support with new semantical tag</li>
+                    <li>
+                        rich content graphics and movies with out installing additional api
+                    </li>
+                    <li>
+                        stricter parsing for consistent browser compatibility, simplify backward compatibility with older versions
+                    </li>
+                </ul>
+             </div>
+            </div>
+      <!--standrad mode vs quirks mode-->
+       <div class="bigWord">
+                What is the difference between standards mode and quirks mode?
+                <div class="defn">
+                <ul>
+                    <li>quircks mode : - layout emulates non standrad behaviour in Navigator and internet 5.
+                    This is essential in order to support websites that were built before the widespread adoption of web
+                    standards.</li>
+                    <li>
+                        Standard mode can be full stndard mode or almost standard mode. In full standards mode the behaviour is the
+                        behaviour described in HTML and CSS. In almost standard mode a small number of quirks mode are implemented
+                    </li>
+
+                </ul>
+                </div>
+            </div>
+       <!--HTML vs XHTML-->
+       <div class="bigWord">
+                What is the difference between HTML and XHTML?
+              <div class="defn">
+
+                                XHTML stands for EXtensible HyperText Markup Language. It is HTML defined as an XML application
+                                XHTML is supported by all major browsers. It is almost identical but stricter than HTML.
+                                In XHTML
+                                <blockquote>
+                                    DOCTYPE is mandatory. The xmlns attribute in html is also mandatory. html, head, title and body are mandatory.
+                                    XHTML elements must be properly nested, always be closed, must be in lowercase.
+                                    XHTML documents must have one root element. Attribute names must be in lower case. Attribute values must be quoted.
+                                    Attribute minimization is forbidden.
+                                </blockquote>
+
+                        </div>
+            </div>
+       <!--application xhtml/xml-->
+       <div class="bigWord">
+                Are there any problems with serving pages as application/xhtml+xml?
+                <div class="defn">
+                    <ul>
+                        <li>
+                            Unlike HTML, XHTML is an XML-based markup language. The syntax of XML is slightly different from that of HTML, and
+                            XML processors are less forgiving if you make mistakes. XML-based content development puts a lot of emphasis on well-formedness
+                            and validity, and can be readily integrated with all the processing tools, data, and automation available in the XML world.
+                            Many developers prefer to use XHTML because of the advantages XML's rigor brings for editing or processing of documents.
+                        </li>
+                        <li>
+                            Problems:
+                            <blockquote>Less forgiving if you make mistakes, Not all browsers support content served as XML including version 8 internet explorer,</blockquote>
+                        </li>
+                    </ul>
+                        </div>
+            </div>
+       <!--block line elements and inline elements-->
+       <div class="bigWord">
+                What is the difference between block line elements and inline elements?
+            <div class="defn">
+                HTML (Hypertext Markup Language) elements are usually either "block-level" elements or "inline" elements.
+                A block-level element occupies the entire space of its parent element (container), thereby creating a "block."
+              Example article, aside, blockquote, p, footer, h1-h6
+                An inline element occupies only the space bounded by the tags that define the inline element.
+                Example big, i, small, abbr, acronym, cite, em, kbd, var,
+              </div>
+          </div>
+       <!--multiple languages in a page-->
+       <div class="bigWord">
+          How do you serve a page with content in multiple languages?
+          <div class="defn">
+              Language tags are used to indicate the language of text or other items in HTML and XML documents.
+              Use the lang attribute to specify language tags in HTML, and the xml:lang attribute for XML.
+              or Use the lang attribute for pages served as HTML, and the xml:lang attribute for pages served as XML
+              <blockquote>
+                  By getting the server to send the information in the HTTP Content-Language header. Example<code>Content-Language: en, hi, pa</code>
+                  The HTTP Content-Language header can be used to provide metadata about the intended audience of the page,
+                  and can indicate that this is more than one language.
+                  The Content-Language value for an http-equiv attribute on a meta element should no longer be used.
+                  You should always use a language attribute on the html tag to declare the default language of the actual text in the page.
+              </blockquote>
+            </div>
+            </div>
+      <!--Web workers-->
+      <div class="bigWord">
+                What are web workers?
+            <div class="defn">
+                Web Workers provide a simple means for web content to run scripts in background threads.
+                The worker thread can perform tasks without interfering with the user interface.
+            </div>
+    </div>
+      <!--Web Sockets-->
+      <div class="bigWord">
+                What are WebSockets?
+            <div class="defn">
+             WebSockets is an advanced technology that makes it possible to open an interactive communication session between the user's browser and a server.
+             With this API, you can send messages to a server and receive event-driven responses without having to poll the server for a reply.
+            </div>
+            </div>
+      <!--xmlHttpRequest-->
+      <div class="bigWord">
+                What is XMLHttpRequest?
+                <div class="defn">
+                XMLHttpRequest is an API that provides client functionality for transferring data between a client and a server.
+                It provides an easy way to retrieve data from a URL without having to do a full page refresh.
+                This enables a Web page to update just a part of the page without disrupting what the user is doing.
+                 XMLHttpRequest is used heavily in AJAX programming.
+                </div>
+            </div>
+      <!--Interfaces of Web Sockets-->
+      <div class="bigWord">
+                What are the interfaces of Websocket?
+          <div class="defn">
+          <strong>WebSocket</strong>The primary interface for connecting to a WeSocket server and then sending and receiving data on the connection
+          <strong>CloseEvent</strong>The event send by the WebSocket object when the connection closes
+          <strong>MessageEvent</strong>The event sent by the WebSocket object when message is received from the server
+            </div>
+          </div>
+      <!--Tools of WebSocket-->
+      <div class="bigWord">
+         What are some of the tools of Websocket?
+         <div class="defn"> Socket.IO, Total.js, Faye</div>
+       </div>
+      <!--webRTC-->
+      <div class="bigWord">
+                What is webRTC?
+                <div class="defn">
+                     WebRTC (Web Real-Time Communications) is a technology which enables Web applications and sites to capture and optionally stream audio
+                    and/or video media, as well as to exchange arbitrary data between browsers without requiring an intermediary. The set of standards that
+                    comprises WebRTC makes it possible to share data and perform teleconferencing peer-to-peer, without requiring that the user install
+                plug-ins or any other third-party software.
+                </div>
+            </div>
+        <!--things to wary for multilingual sites-->
+      <div class="bigWord">
+                What kind of things must you be wary of when design or developing for multilingual sites?
+          <div class="defn">
+              <ul>
+                  <li>Character encoding, Language direction, Using the right language code, Font sizes</li>
+                  <li>
+                      Better to translate by your self instead of language software translators, presenting language options,encode with UTF-8
+                      <code></code>, url parameters example www.haiweb.com, www.haiweb.com/UK,
+                      According to w3
+                      <blockquote>A Unicode-based encoding such as UTF-8 can support many languages and can accommodate pages and forms in any mixture of those languages</blockquote>
+                  </li>
+
+              </ul>
+           </div>
+            </div>
+        <!--data attributes-->
+        <div class="bigWord">
+                What are data- attributes good for?
+            <div class="defn"><ul>
+                            <li>
+                                Any attribute on any element whose attribute name starts with data- is a data attribute.
+                                data-* attributes allow to store extra information or custom data private to the page or application on standard, semantic HTML elements
+                                without other hacks such as non-standard attributes, extra properties on DOM.
+                                They gives us the ability to embed custom data attributes on all HTML elements.
+                                The stored (custom) data can then be used in the page's JavaScript to create a more engaging user experience (without any Ajax calls or server-side database queries).
+                                The data-* attributes consist of two parts:
+                            </li>
+                            <li>
+                                The attribute name should not contain any uppercase letters, and must be at least one character long after the prefix "data-"
+                                The attribute value can be any string
+                                Note: Custom attributes prefixed with "data-" will be completely ignored by the user agent.
+                            </li>
+                            <li>Example article[data-columns='3'] { width: 400px;} article[data-columns='4'] { width: 600px; }</li>
+                </ul>
+                        </div>
+            </div>
+        <!--building blocks of html5-->
+         <div class="bigWord">
+             What are the building blocks of HTML5?
+             <div class="defn">
+                 <ul>
+                     <li>Semantics: allowing you to describe more precisely what your content is.</li>
+                     <li>Connectivity: allowing you to communicate with the server in new and innovative ways like web socket.</li>
+                     <li>Offline and storage: allowing webpages to store data on the client-side locally and operate offline more efficiently.</li>
+                     <li>Multimedia: making video and audio first-class citizens in the Open Web.</li>
+                     <li>2D/3D graphics and effects: allowing a much more diverse range of presentation options.</li>
+                     <li>
+                         Performance and integration: providing greater speed optimization and better usage of computer hardware.
+                         Example history API, XMLHttpRequest, Web Workers, JIT
+                     </li>
+                     <li>JIT-compiling JavaScript engines: - The new generation of JavaScript engines is much more powerful, leading to greater performance</li>
+                     <li>Device access: allowing for the usage of various input and output devices.</li>
+                     <li>Styling: letting authors write more sophisticated themes.</li>
+                     </ul>
+             </div>
+         </div>
+       <!--cookie, session storage and local storage-->
+         <div class="bigWord">
+             What is the diffrenece between cookie, sessionStorage and localStorage?
+             <div class="defn">
+                 With HTML5, web pages can store data locally within the user’s browser. Earlier, this was done with cookies.
+                 However, Web Storage is more secure and faster. The data is not included with every server request, but used ONLY when asked for.
+                 The data is stored in name/value pairs, and a web page can only access data stored by itself.
+                 <ul>
+                     <li> Unlike cookies, the storage limit is far larger (at least 5MB) and information is never transferred to the server.</li>
+                     <li>The difference between localStorage and sessionStorage involves the lifetime and scope of the storage.</li>
+                     <li> Data stored through localStorage is permanent it does not expire and remains stored on the user’s computer</li>
+                     <li> until a web app deletes it or the user asks the browser to delete it.</li>
+                     <li> SessionStorage has the same lifetime as the top-level window or browser tab in which the script that stored it is running.</li>
+                     <li> When the window or tab is permanently closed, any data stored through sessionStorage is deleted.</li>
+                     <li> Both forms of storage are scoped to the document origin so that documents with different origins will never share the stored objects.</li>
+                     <li> But sessionStorage is also scoped on a per-window basis. If a user has two browser tabs displaying documents from the same origin,</li>
+                     <li> those two tabs have separate sessionStorage data the scripts running in one tab cannot read or overwrite the data written by</li>
+                     <li> scripts in the other tab, even if both tabs are visiting exactly the same page and are running exactly the same scripts.</li>
+                     <li> HTML local storage provides two objects for storing data on the client i.e. localStorage and sessionStorage.</li>
+                     <li> Web applications can store data locally within the user's browser (Information is never transferred to the server).</li>
+                     <li> They are more secure and large amounts of data can be stored locally, without affecting website performance (atleast 5MB).</li>
+                     <li> Local storage is per origin (per domain and protocol). All pages, from one origin, can store and access the same data.<dt>window.localStorage - stores data with no expiration date</dt><dt>window.sessionStorage - stores data for one session (data is lost when the browser tab is closed)</dt></li>
+                     <li> cookie can be used to store data on the local and they can be read only by the server and its maximum size is 4096bytes (4KB).</li>
+                     <li> Cookies are included with every HTTP request, thereby slowing down your web application by transmitting the same data.</li>
+                     <li> Cookies are included with every HTTP request, thereby sending data unencrypted over the internet.</li>
+                     <li> Cookies are limited to about 4 KB of data . Not enough to store required data.</li>
+
+                 </ul>
+         </div>
+            </div>
+            <!--script async vs script defer-->
+            <div class="bigWord">
+                Describe the difference between script async and script defer>
+
+                <div class="defn">
+                    The HTML element is used to embed or reference an executable script.
+                    Scripts without async or defer attributes, as well as inline scripts, are fetched and executed immediately,
+                    before the browser continues to parse the page.
+
+                        </div>
+            </div>
+            <!--positioning css-lnk and script-->
+            <div class="bigWord">
+                Why is it generally a good idea to position stylesheets between and JS just before ?
+                Do you know any exceptions? /Revision needed/
+                <div class="defn">
+                    If neither async or defer is present The script is fetched and executed immediately, before the browser continues parsing the page.
+                    Putting your scripts at the bottom of the page body, lets the browser load the page first.
+                    position CSS at the head to download the styles as quick as possible.
+                 If you want to a script to execute early, before the page is displayed put it at the head otherwise at the end
+
+                </div>
+            </div>
+            <!--progressive rendering-->
+            <div class="bigWord">
+         What is progressive rendering?
+         <div class="defn"> Rendering the page gradually, the content first and others like images or scripts last</div>
+            </div>
+            <!--html templating languages-->
+            <div class="bigWord">
+                What are the different HTML templating languages?
+                <div class="defn">
+                   An HTML template is a folder that contains a template file that ScreenSteps will parse and use to format lesson and manual output when using the Export to HTML feature.
+                 In addition the folder can contain any number of supporting files or folders. Example Jekyll in Github
+               </div>
+            </div>
+            <!--purpose of dialogue-->
+            <div class="bigWord">What is the purpose of dialogue in html5?
+              <div class="defn"> to mark up conversation</div>
+            </div>
+            <!--canvas vs SVG-->
+            <div class="bigWord">
+                What is the difference between canvas and SVG?
+                <div class="defn">
+                  canvas is an HTML element which can be used to draw graphics using scripting (usually JavaScript).
+                 This can, for instance, be used to draw graphs, make photo composition or simple (and not so simple) animations.
+                 Draw graphics, on the fly, via scripting (usually JavaScript).
+                 Scalable Vector Graphics (SVG) is an XML-based markup language for describing two-dimensional vector graphics.
+                SVG is essentially to graphics what HTML is to text. SVG is similar to Adobe's proprietary Flash technology,
+                but it is a text-based open Web standard instead of a closed binary format.
+                It is explicitly designed to work with other web standards such as CSS, DOM, and SMIL.
+                 In general as the size of the screen increases, canvas begins to degrade as more pixels need to be drawn.
+                As the number of objects increases on the screen, SVG begins to degrade as we are continually adding them to the DOM
+            </div>
+          </div>
+            <!--header, article, section etc descriptions-->
+            <div class="bigWord">
+                Describe header, section, article, footer?
+                <div class="defn">
+
+                                header: - element is used to contain introductory and navigational information about a section of the page. This can include the section heading, the author’s name, time and date of publication, table of contents, or other navigational information.
+                            <br />
+                                article: - element is meant to house a self-contained composition that can logically be independently recreated outside of the page without losing it’s meaining. Individual blog posts or news stories are good examples. element specifies independent, self-contained content.
+                            <br />
+                            section:- element is a flexible container for holding content that shares a common informational theme or purpose. A section is a thematic grouping of content, typically with a heading
+                            <br />
+                                footer: - element is used to hold information that should appear at the end of a section of content and contain additional information about the section. Author’s name, copyright information, and related links are typical examples of such content.
+
+                        </div>
+            </div>
+            <!--form Insert text by using html5-->
+            <div class="bigWord">
+                What are the possible ways to submit data to a server by using html5?
+                <div class="defn">                                                                                          by specifying an action on your form element.For example
+                        &lt;form action="/url-where-you-want-to-submit-form-data"&gt;
+                        &lt;input type="text" placeholder="data URL"&gt; &lt;/form&gt;
+                </div>
+            </div>
+          
+    </article>
+    <footer>
+      <div class="row">
+    <div class="col-lg-6">
+      <h4>&#169;2017 All Rights Reserved</h4>
+    </div>
+    <div class="col-lg-6">
+      <h4>Designed &amp; Developed: <small>Haileab A Gebrekidan</small></h4>
+
+    </div>
+
+  </footer>
+</body>
+</html>

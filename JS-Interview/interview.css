@@ -1,0 +1,66 @@
+﻿body {
+  background-color: rgba(255,0,0,0.5);
+  background-image: -webkit-radial-gradient(ellipse farthest-corner at 505px 405px , #EF5 0%, rgba(255, 255, 0, 0) 70%, #F00 95%);
+ background-image: -moz-radial-gradient(ellipse farthest-corner at 505px 405px , #EF5 0%, rgba(255, 255, 0, 0) 70%, #F00 95%);
+ background-image: radial-gradient(ellipse farthest-corner at 505px 405px , #F70 0%, rgba(255, 255, 0, 0) 70%, #F00 95%);
+  font-family: 'Oswald', sans-serif;
+
+}
+footer{
+    margin:2% 0% 0% 0%;
+    background-color:#005;
+    background-image: radial-gradient(ellipse farthest-corner at 245px 45px , #f00 10%, rgba(0, 0, 0, 0.8) 50%, #808 95%);
+    color:#FFC;
+  }
+
+.bigWord{
+    color:#FFF; background-color:rgba(4,5,6,0.5);
+    border: 0.1em #FFF solid;
+}
+.bigWord:hover{
+    background-color:rgba(4,5,6,0.9);
+    cursor:pointer;
+
+}
+.defn{
+    display:none;
+}
+.myReply{
+    display:block;
+    margin:0% 5% 1% 5%;
+}
+code{
+    width:60%; display:block; color:white; background-color: black; margin:0.3em;
+}
+
+/* Small devices (smartphones) */
+@media (max-width: 600px) {
+    body{
+         margin:5px;
+         padding:2px;
+         border:5px solid #000;
+         font-size:1.2em;
+    }
+
+}
+
+/* Small devices (tablets) */
+@media (min-width: 600px) {
+ body{
+        margin:15px 5px;
+        padding:5px;
+        border:10px solid #055;
+        font-size:1.7em;
+}
+
+}
+/* Medium devices (desktops) */
+@media (min-width: 850px) {
+     body{
+        margin:5px 4px;
+        padding:5px 50px;
+        border:10px solid #006a99;
+        font-size:2em;
+  }
+
+}

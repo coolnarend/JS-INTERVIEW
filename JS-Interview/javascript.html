@@ -1,0 +1,991 @@
+﻿<!DOCTYPE html>
+<html spellcheck="true">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Arimo|Oswald" rel="stylesheet">
+    <title>JavaScript Interview Questions</title>
+    <meta name="description" content="A javascript interview questions collected from different sources" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="interview.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="interview.js"></script>
+</head>
+<body>
+    <section>
+        <div style="display:inline;">
+            <h2 class="text-primary">Test Your JavaScript Skills</h2>
+
+            <figure style="text-align:right; display:inline;">
+                <img style="width:5em;height:5em;" src="teamwork.jpg" />
+                <figcaption class="text-info">Prepared By : Haileab A Gebrekidan</figcaption>
+            </figure>
+        </div>
+        <article>
+            <!--Lexical Environment-->
+            <div class="bigWord Lexical">
+                What is Lexical Environment?
+                <div class="defn Lexical">
+                    It is an environment where something sits physically in the code you write.
+                    It is something you do with words or grammers. For instance
+                    <code>function selam(){var x="morning"}</code> The variable x sits lexically on selam function.
+                    <strong>A new lexical scope is created everytime you type a function definition. Only curly you defined in a function creates a new scope.</strong>
+                </div>
+            </div>
+            <!--Execution Context-->
+            <div class="bigWord Execution">
+                What is Execution Context?
+                <div class="defn Execution">
+                    A wrapper to help manage the code that is running. There are lots of lexical environment. Which one is currently running is managed by execution environment. When JS is executed an execution context is created. At the base level (when you are not in a function), global object (window in case of browser), this (special variable), outer environment are created. Finally the execution context is running your code. There are two phases in execution context. First phase : Creation Phase: variables, functions and memory are set up. Second phase:Execution phase: Running code line by line.
+                    <strong>It differs from lexical scope because it built as the code runs</strong>
+                </div>
+            </div>
+            <!--Name Value Pair-->
+            <div class="bigWord NameValePair">
+                What is Name Value pair in JavaScript?
+                <div class="defn NameValuePair">
+                    A name which maps to a unique value. Example <code>address = "61 Kenbrook Dr." or color:red; color:black;</code>
+                </div>
+            </div>
+            <!--Object-->
+            <div class="bigWord Object">
+                What is object in JavaScript?
+                <div class="defn Object">
+                    It is a collection of name value pairs.<code>address = "61 Kenbrook Dr." or color:red; color:black;</code>
+                    Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon.
+                </div>
+            </div>
+            <!--Hoisting-->
+            <div class="bigWord Object">
+                What is hoisting in JavaScript?
+                <div class="defn Object">
+                    JavaScript engine setup a memory space for variables and functions before entire code is running. Example if we run the following codes, the second code output is undefined because memory space for a is already setup <code>var a="helloWorld!!!";<br /> console.log(a);<br /> <output style=" color:#000fff; display:inline; font-style: italic;">"HelloWorld"</output></code>
+                    <code>console.log(a);<br /> var a="helloWorld!!!";<br /> <output style=" color:#000fff; display:inline; font-style: italic;">undefined</output></code>
+                    <code>console.log(a); <br /> <output style=" color:#000fff; display:inline; font-style: italic;"> Uncaught ReferenceError: a is not defined</output></code>
+                    <strong>Hoisting is variables setup (and set equal to undefined) and functions setup</strong>
+                </div>
+            </div>
+            <!--event bubbling.-->
+            <div class="bigWord EventBubbling">
+                Describe event bubbling.
+                <div class="defn EventBubbling">
+                    With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
+                    <code></code>
+                    with capturing, the opposite, the event is first captured in the outer most element and then propagated to inner elements.
+                </div>
+            </div>
+            <!--Undefined-->
+            <div class="bigWord Undefined">
+                What is undefined in JavaScript?
+                <div class="defn Undefined">
+                    It is a special keyword is JS and it has a memory space but a value hasn't been set.
+                    <code>console.log(a);<output style=" color:#000fff; display:inline; font-style: italic;">Uncaught ReferenceError: a is not defined</output> </code>
+                    <code>var a; console.log(a);<output style=" color:#000fff; display:inline; font-style: italic;">undefined</output> </code>
+                </div>
+            </div>
+            <!--single threaded-->
+            <div class="bigWord SingleThreaded">
+                What does single threaded means in JS?
+                <div class="defn SingleThreded">
+                    It means execution of one command at a time. It's synchronous
+                    <code></code>
+                </div>
+            </div>
+            <!--invocation-->
+            <div class="bigWord Invocation">
+                What does invocation mean in JS?
+                <div class="defn Invocation">
+                    It means running a function. In JavaScript we invoke a function by using function name with parenthesis. Every time a function is called a new execution context is created for that function
+                    <code></code>
+                </div>
+            </div>
+            <!--varible environment-->
+            <div class="bigWord VariableEnvt">
+                What is variable environment?
+                <div class="defn VariableEnvt">
+                    It is a place where variables live and how they relate to each other with memory.
+                    <code></code>
+                </div>
+            </div>
+            <!--scope-->
+            <div class="bigWord Scope">
+                What is scope in JavaScript?
+                <div class="defn Scope">
+                    it is a place where variable is available in your code.
+                    <code></code>
+                </div>
+            </div>
+            <!--namespace-->
+            <div class="bigWord NameSpace">
+                What is namespace?
+                <div class="defn NameSpace">
+                    A container for variables and functions.
+                    <code></code>
+                </div>
+            </div>
+            <!--first class functions-->
+            <div class="bigWord FirstClassFunctions">
+                What does first class function mean?
+                <div class="defn FirstClassFunctions">
+                    Everything you can do with other types (Number, String, Object, Boolean etc) you can do with functions.<strong>Expression is a unit of code that results in a value.</strong>
+                    <code></code>
+                </div>
+            </div>
+            <!--this identifier-->
+            <div class="bigWord This">
+                What is the keyword <strong>this</strong> refers to in JS?
+                <div class="defn This">
+                    The this keyword refers to the current object the code is being written inside
+                    <code></code>
+                </div>
+            </div>
+            <!--prototype-->
+            <div class="bigWord Prototype">
+                What are prototypes in JS?
+                <div class="defn Prototype">
+                    They are mechanisms in which JS objects inherit features from each other
+                    <code></code>
+                </div>
+            </div>
+            <!--Event Delegation-->
+            <div class="bigWord ">
+                Explain event delegation?
+                <div class="defn ">
+                    JavaScript event delegation is a simple technique by which you add a single event handler to a parent element in order to avoid having to add event handlers to multiple child elements. Event delegation allows you to avoid adding event listeners to specific nodes;  instead, the event listener is added to one parent.  That event listener analyzes bubbled events to find a match on child elements.The event delegation helps to simplify event handling by smart use of bubbling and target element. <strong> </strong>
+                    <strong>If there are many element inside one parent, and you want to handle events on them of them - don’t bind handlers to each element. Instead, bind the single handler to their parent, and get the child from event.target.</strong>
+                    <code></code>
+                </div>
+            </div>
+            <!--EventDelegationHow-->
+            <div class="bigWord EventDelegationHow">
+                How event delegation works?
+                <div class="defn EventDelegationHow">
+                    When an event is triggered on an element, for example a mouse click on a button, the same event is also triggered on all of that element’s ancestors. This process is known as event bubbling. the event bubbles up from the originating element to the top of the DOM tree. The target element of any event is the originating element, the button in our example, and is stored in a property of the event object. Using event delegation it’s possible to add an event handler to an element, wait for an event to bubble up from a child element and easily determine from which element the event originated.
+                    <code>
+                        function getEventTarget(e) {
+                        e = e || window.event;
+                        return e.target || e.srcElement;
+                        }
+                    </code>
+                </div>
+            </div>
+            <!--prototype-->
+            <div class="bigWord Prototype">
+                Explain how prototypal inheritance works
+                <div class="defn Prototype">
+                    In JavaScript, the inheritance is prototype-based. That means that there are no classes. Instead, an object inherits from another object.
+                    Prototypes are the mechanism by which JavaScript objects inherit features from one another, and they work differently to inheritance mechanisms in classical object-oriented programming languages.
+                    JavaScript is often described as a prototype-based language — each object has a prototype object, which acts as a template object that it inherits methods and properties from. An object's prototype object may also have a prototype object, which it inherits methods and properties from, and so on. This is often referred to as a prototype chain, and explains why different objects have properties and methods defined on other objects available to them.
+                    When it comes to inheritance, JavaScript only has one construct: objects. Each object has an internal link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. null, by definition, has no prototype, and acts as the final link in this prototype chain.
+                    <code>
+                        var animal = { eats: true }
+                        var rabbit = { jumps: true }
+                        rabbit.__proto__ = animal  // inherit
+                        alert(rabbit.eats) // true
+                    </code>
+                </div>
+            </div>
+            <!--AMD and commonJS-->
+            <div class="bigWord AMDCommonJS">
+                What do you think of AMD vs CommonJS?
+                <div class="defn ">
+                    <div>
+                        Asynchronous module definition (AMD) is a specification for the programming language JavaScript. It defines an application programming interface (API) that defines code modules and their dependencies, and loads them asynchronously if desired.
+                        Its overall goal is to provide a solution for modular JavaScript that developers can use today.
+                    </div>
+                    <div>
+                        CommonJS are a volunteer working group which aim to design, prototype and standardize JavaScript APIs. To date they've attempted to ratify standards for both modules and packages. The CommonJS module proposal specifies a simple API for declaring modules server-side and unlike AMD attempts to cover a broader set of concerns such as io, filesystem, promises and more. CommonJS is a project that aims to define a series of specifications to help in the development of server-side JavaScript applications.
+                    </div>
+                    <div>
+                        The main difference between AMD and CommonJS lies in its support for asynchronous module loading.
+                    </div>
+                    <code></code>
+                </div>
+            </div>
+            <!--IIFE-->
+            <div class="bigWord IIFE">
+                Explain why the following doesn't work as an IIFE:<code>function foo(){ }()</code>. What needs to be changed to properly make it an IIFE?
+                <div class="defn IIFE">
+                    An immediately-invoked function expression (or IIFE, pronounced "iffy") is a JavaScript programming language idiom which produces a lexical scope using JavaScript's function scoping.It is a JavaScript function that runs as soon as it is defined. It is also an anonymous function that is created and then immediately invoked. It's not called from anywhere else (hence why it's anonymous), but runs just after being created.
+                    when the parser encounters the function keyword, it treats it as a function declaration (statement), and not as a function expression. Because of that
+                    <code>function foo(){ }()</code> doesn't work.
+                    The following are common conventions to explicitly tell the parser to expect an expression.
+                    <code>
+                        (function foo(){ ... }());(function foo(){ ... })(); +function foo(){ ... }();!function foo(){ ... }();~function foo(){ ... }();-function foo(){ ... }();
+                    </code>
+                    <strong>
+                        Lexical scoping (sometimes known as static scoping ) is a convention used with many programming languages that sets the scope (range of functionality) of a variable so that it may only be called (referenced) from within the block of code in which it is defined.
+                    </strong>
+                    IIFE is used to place all lirary code inside of a local scope.
+                </div>
+            </div>
+            <!--declaration and definition-->
+            <div class="bigWord Declaration">
+                What's the difference between a declaration and definition?
+                <div class="defn Declaration">
+                    Declaration is when you ask a compiler or interpreter to create a new variable give it a name while definition is when you assign a value in that variable.
+                    <code>
+                        var x; // declaration
+                        x = "Selam"; // definition
+                    </code>
+                </div>
+            </div>
+            <!--type coercion-->
+            <div class="bigWord Coercion">
+                What's coercion mean in JavaScript?
+                <div class="defn Coercion">
+                    Type coercion means that when the operands of an operator are different types, one of them will be converted to an "equivalent" value of the other operand's type(123 + "4") or if you do: var x =1; var y=true;
+                    y == x
+                    the boolean operand will be converted to an integer: false becomes 0, true becomes 1. Then the two values are compared.
+                    However, if you use the non-converting comparison operator ===, no such conversion occurs. When the operands are of different types, this operator returns false, and only compares the values when they're of the same type.
+                    <veryImportant style=" font-style: italic;display:block; border:0.2em #123456 dashed; padding:0.5em">
+                        Converting a value from one type to another is often called "type casting," when done explicitly, and "coercion" when done implicitly (forced by the rules of how a value is used).
+                    </veryImportant>
+                </div>
+            </div>
+            <!--undefined, null and not declared-->
+            <div class="bigWord UndefinedNull">
+                What's the difference between a variable that is: null, undefined or undeclared?
+                <div class="defn UndefinedNull">
+                    undefined is a variable that has been declared but no value exists and is a type of itself 'undefined'. null is a value of a variable and is a type of object. We use console.log(); and type of to check if a variable is undefined or null . undeclared variables is a variable that has been declared without var keyword
+                    <code>
+                        null === undefined // false
+                        null == undefined // true
+                        typeof(null); //object
+                        typeof(undefined); //undefined
+                    </code>
+                </div>
+            </div>
+            <!--closure-->
+            <div class="bigWord Closure">
+                What is a closure, and how/why would you use one?
+                <div class="defn Closure">
+                    JavaScript variables can belong to the local or global scope. Private variables can be made possible with closures. Closures are functions that refer to independent (free) variables (variables that are used locally, but defined in an enclosing scope). In other words, these functions 'remember' the environment in which they were created.
+                    <code>
+                        var add = (function () { var counter = 0;
+                        return function () {return counter += 1;}})();
+                    </code>
+                    <strong>
+                        The variable add is assigned the return value of a self-invoking function. The self-invoking function only runs once. It sets the counter to zero (0), and returns a function expression. This way add becomes a function. The "wonderful" part is that it can access the counter in the parent scope. This is called a JavaScript closure. It makes it possible for a function to have "private" variables. The counter is protected by the scope of the anonymous function, and can only be changed using the add function.
+                    </strong>
+                </div>
+            </div>
+            <!--anonymous function-->
+            <div class="bigWord ">
+                What's a typical use case for anonymous functions?
+                <div class="defn ">
+                    An anonymous function is a function that is not stored in a program file, but is associated with a variable whose data type is function_handle . Anonymous functions can accept inputs and return outputs, just as standard functions do. However, they can contain only a single executable statement. Functions stored in variables do not need function names. They are always invoked (called) using the variable name.
+                    <code>
+                        var selam = function(a,b){
+                        return (a * b);
+                        }
+                    </code>
+                </div>
+            </div>
+            <!--global import-->
+            <div class="bigWord GlobalImport">
+                Explain why the scope of a variable with out the keyword var is global?
+                <div class="defn GlobalImport">
+                    JavaScript has a feature known as implied globals. Whenever a name is used, the interpreter walks the scope chain backwards looking for a var statement for that name. If none is found, that variable is assumed to be global.
+                    <code></code>
+                </div>
+            </div>
+            <!--module pattern vs classical inheritance-->
+            <div class="bigWord DesignPattern">
+                How do you organize your code? (module pattern, classical inheritance?)
+                <div class="defn DesignPattern">
+                    A pattern is a reusable solution that can be applied to commonly occurring problems in software design. Examples Templates. Patterns don’t solve all design problems nor do they replace good software designers, however, they do support them.
+                    <veryImportant style=" font-style: italic;display:block; border:0.2em #123456 dashed; padding:0.5em">
+                        A design pattern names, abstracts, and identifies the key aspects of a common design structure that make it useful for creating a reusable object-oriented design.
+                    </veryImportant>
+                    <code>
+                        (function(){ //code })();
+                    </code>
+                    <veryImportant style=" font-style: italic;display:block; border:0.2em #123456 dashed; padding:0.5em">
+                        The above code it decalres a function and then calls itself immediately i.e. <strong>IIFE - immediately invoked function expression</strong>, the function creates new scope and privacy
+                    </veryImportant>
+                    <code>
+                        var module = (function(){ //code })();
+                    </code>
+                    <veryImportant style=" font-style: italic;display:block; border:0.2em #123456 dashed; padding:0.5em">
+                        Module pattern makes scoping a breeze, makes things simple and easy to read, uses objects in a very nice way.
+                    </veryImportant>
+                    <code>
+                        var Module = (function () { <br />
+                        var privateMethod = function () { // private};<br />
+                        var someMethod = function () { // public };<br />
+                        var anotherMethod = function () { // public };<br />
+                        return {
+                        someMethod: someMethod,anotherMethod: anotherMethod
+                        };
+                        })();
+                    </code>
+
+
+                </div>
+            </div>
+            <!--host objects vs native ojects-->
+            <div class="bigWord HostNativeObjects">
+                What's the difference between host objects and native objects?
+                <div class="defn HostNativeObjects">
+                    In JS every element that holds properties and methods is an object except primitive data types.
+                    There are three object categories in JavaScript: Native Objects, Host Objects, and User-Defined Objects.
+                    Native objects are those objects supplied by JavaScript, whose semantics are fully defined by ECMAScript specification rather than by the host environment.. Examples of these are String, Number, Array, Image, Date, Math, Object (constructor), parseInt, eval, string methods like indexOf and replace, array methodsetc.
+                    Host objects are objects that are supplied to JavaScript by the browser (host) environment. Examples of these are window, document, forms, location, history, XMLHttpRequest, setTimeout, getElementsByTagName, querySelectorAll etc.
+                    User-defined objects are those that are defined by the programmer.
+                    <code></code>
+                </div>
+            </div>
+            <!--Defining functions-->
+            <div class="bigWord ObjectConstructor">
+                Difference between: function Person(){}, var person = Person(), and var person = new Person()?
+                <div class="defn ">
+                    <code>
+                        //function defined by function expression <br />
+                        notHoisted(); // TypeError: notHoisted is not a function <br />
+                        var notHoisted = function() {
+                        console.log("bar");
+                        };
+                    </code>
+                    <code>
+                        //function defined by function declaration. <br />
+                        hoisted(); // logs "foo"
+                        function hoisted() {
+                        console.log("foo");
+                        }
+                    </code>
+                    <code>
+                        //function defined by constructor <br />
+                        function Person(){
+                        //some codes here....
+                        }<br />
+                        var Person = new Person();
+                    </code>
+                    <veryImportant style=" font-style: italic;display:block; border:0.2em #123456 dashed; padding:0.5em">
+                        A function defined by <strong>a function expression</strong> inherits the current scope. That is, the function forms a closure. On the other hand, a function defined by a <strong>Function constructor</strong> does not inherit any scope other than the global scope (which all functions inherit). Functions defined by function expressions and function declarations are parsed only once, while those defined by the Function constructor are not. That is, the function body string passed to the Function constructor must be parsed each and every time the constructor is called. Although a function expression creates a closure every time, the function body is not reparsed, so function expressions are still faster than "new Function(...)". Therefore the Function constructor should generally be avoided whenever possible. Function declarations in JavaScript are hoisting the function definition.
+                    </veryImportant>
+                </div>
+            </div>
+            <!--.call vs .apply?-->
+            <div class="bigWord CallApply">
+                What's the difference between Function.prototype.bind, Function.prototype.call and Function.prototype.apply?
+                <div class="defn CallApply">
+                    <strong>Function.prototype.apply()</strong>
+                    The apply() method calls a function with a given this value and arguments provided as an array (or an array-like object).  Syntax
+                    <code>fun.apply(thisArg, [argsArray])</code>
+                    <strong>Function.prototype.call()</strong>
+                    The call() method calls a function with a given this value and arguments provided individually. Syntax
+                    <code>
+                        fun.call(thisArg[, arg1[, arg2[, ...]]])
+                    </code>
+                    <strong>Function.prototype.bind()</strong>
+                    The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+                    Syntax
+                    <code>
+                        fun.bind(thisArg[, arg1[, arg2[, ...]]])
+                    </code>
+                    The bind() function creates a new bound function (BF). A BF is an exotic function object (a term from ECMAScript 2015) that wraps the original function object. Calling a BF generally, results in the execution of its wrapped function.
+                    <veryImportant style=" font-style: italic;display:block; border:0.2em #123456 dashed; padding:0.5em">
+                        the fundamental difference between .call and .apply is that call() accepts <strong>an argument list,</strong> while apply() accepts <strong> a single array of arguments.</strong>
+                    </veryImportant>
+                </div>
+            </div>
+            <!--document.write-->
+            <div class="bigWord ">
+                When would you use document.write()?
+                <div class="defn ">
+                    The document.write methods outputs a string directly into page. It is the fastest way to add a script-generated text into the page. It is also used to insert advertising scripts and counters. document.write can append arbitrary, even partial, incomplete and malformed HTML into document. It is very fast, because the browser doesn’t have to modify an existing DOM structure.
+
+                    <code>document.write(&lt;p&gt;Here is the paragraph&lt;/p&gt;)</code>
+                    document.write has a lot of drawbacks; first, it doesn't work in XHTML; second, it cannot be injected in at a given node point; third, it creates bugs
+                </div>
+            </div>
+            <!--feature detection vs feature inference, and using the UA string-->
+            <div class="bigWord ">
+                What's the difference between feature detection, feature inference, and using the UA string?
+                <div class="defn ">
+                    Feature detection involves working out whether a browser supports a certain block of code, and running different code dependant on whether it does (or doesn't), so that the browser can always provide a working experience rather crashing/erroring in some browsers. Example
+                    <code>
+                        if("geolocation" in navigator) { <br />
+                        navigator.geolocation.getCurrentPosition(function(position) { <br />
+                        // show the location on a map, perhaps using the Google Maps API <br />
+                        }); <br />
+                        }  <br />
+                        else {   <br />
+                        // Give the user a choice of static maps instead perhaps <br />
+                        }   <br />
+                    </code>
+                    Feature inference is assuming that because you've detected one feature that you can use other features. For example if you detect the geolocation API maybe you'd assume your user is on a modern browser and so now LocalStorage is available. It's usually bad to assume so you're much better off just using feature detection for each feature you want to take advantage of, and have a fallback strategy in place in the event a feature isn't available. Even if a user has a modern browser with geolocation doesn't mean they're going to allow your app to use it so plan accordingly.
+                    In computing, a user agent (UA string) is software (a software agent) that is acting on behalf of a user. One common use of the term refers to a web browser telling a web site information about the browser and operating system. This allows the web site to customize content for the capabilities of a particular device, but also raises privacy issues. It is super old system.
+                </div>
+            </div>
+            <!--request response headers-->
+            <div class="bigWord ">
+                Explain http request and response headers:
+                <div class="defn ">
+                    HTTP headers allow the client and the server to pass additional information with the request or the response.
+                    A request header consists of its case-insensitive name followed by a colon ':', then by its value (without line breaks).
+                    <ul style="margin:0em;">
+                        <li style="margin-left: 1.6em;">
+                            <strong>Expires:  -</strong> The Expires header contains the date/time after which the response is considered stale/not fresh.
+                            Invalid dates, like the value 0, represent a date in the past and mean that the resource is already expired.
+                            If there is a Cache-Control header with the "max-age" or "s-max-age" directive in the response, the Expires header is ignored.
+                            Syntax <code>Expires: <http-date> Example Expires: wed, 14 Jan 2015 07:12:54 GMT</code>
+                        </li>
+                        <li style="margin-left: 1.6em;">
+                            <strong>Date: -</strong>The Date general HTTP header contains the date and time at which the message was originated.
+                            Syntax: <code>Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT Example: Date: Wed, 21 Oct 2015 07:28:00 GMT </code>
+                        </li>
+                        <li style="margin-left: 1.6em;">
+                            <strong>Age: - </strong>The Age header contains the time in seconds the object has been in a proxy cache.
+                            Syntax: <code>Age: <delta-seconds> Example Age: 24</code>
+                        </li>
+                        <li style="margin-left: 1.6em;">
+                            <strong>If-Modified-since: - </strong>The If-Modified-Since request HTTP header makes the request conditional:
+                            the server will send back the requested resource, with a 200 status, only if it has been last modified after the given date.
+                            If the request has not been modified since, the response will be a 304 without any body; the Last-Modified header will
+                            contain the date of last modification. Unlike If-Unmodified-Since, If-Modified-Since can only be used with a GET or HEAD.
+                            Syntax: <code>If-Modified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT</code>
+                        </li>
+                        <li style="margin-left: 1.6em;">
+                            <strong>Do Not Track: - </strong> The DNT (Do Not Track) request header indicates the user's tracking preference.
+                            It lets users indicate whether would prefer privacy rather than personalized content.
+                            Syntax <code>DNT: 0 //The user prefers to allow tracking on the target site. <br /> DNT: 1 // The user prefers not to be tracked on the target site.</code>
+                        </li>
+                        <li style="margin-left: 1.6em;">
+                            <strong>Cache-Control: - </strong>The Cache-Control general-header field is used to specify directives for caching mechanisms
+                            in both, requests and responses. Caching directives are unidirectional, meaning that a given directive in a request is not
+                            implying that the same directive is to be given in the response.
+                        </li>
+                        <li style="margin-left: 1.6em;">
+                            <strong>Transfer-Encoding: - </strong>The Transfer-Encoding header specifies the form of encoding used to safely
+                            transfer the entity to the user.
+                        </li>
+                        <li style="margin-left: 1.6em;">
+                            <strong>ETag: - </strong> The ETag HTTP response header is an identifier for a specific version of a resource.
+                            It allows caches to be more efficient, and saves bandwidth, as a web server does not need to send a full response
+                            if the content has not changed. On the other side, if the content has changed, etags are useful to help prevent
+                            simultaneous updates of a resource from overwriting each other ("mid-air collisions").
+                        </li>
+                        <li style="margin-left: 1.6em;">
+                            <strong>X-Frame-Options: - </strong> The X-Frame-Options HTTP response header can be used to indicate whether or not a
+                            browser should be allowed to render a page in a &lt;frame&gt;, &lt;iframe&gt; or &lt;object&gt; . Sites can use this to avoid
+                            clickjacking attacks, by ensuring that their content is not embedded into other sites.
+                            Syntax: <code>X-Frame-Options: DENY <br />X-Frame-Options: SAMEORIGIN<br />X-Frame-Options: ALLOW-FROM https://example.com/</code>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <!--multiple domains-->
+            <div class="bigWord ">
+                Traditionally, why has it been better to serve site assets from multiple domains? Example youtube.com has moved its .JS files to
+                ytimg.com, cnn.com has moved its .JS files to cdn.turner.com, weather.com has moved its .JS files to j.imwx.com
+                <div class="defn ">
+                    you want them to be cached downstream by proxies and people's browsers as much as possible,
+                </div>
+            </div>
+            <!--HTTP actions -->
+            <div class="bigWord ">
+                What are HTTP actions? List all HTTP actions that you know, and explain them.
+                <div class="defn ">
+                    HTTP defines a set of request methods/actions to indicate the desired action to be performed for a given resource.
+                    The set of common methods of HTTP/1.1 are explained below but they can be expanded
+                    <ol>
+                        <li style="margin-left: 1.6em;">
+                            <em>GET: - </em>: - The GET method is used to <mark>retrieve information</mark> from the given server using a given URI.
+                            Requests using GET should only retrieve data and should have no other effect on the data.
+                        </li>
+                        <li style="margin-left: 1.6em;"><em>POST: - </em>: -A POST request is used to <mark>send data</mark> to the server, for example, customer information, file upload, etc. using HTML forms.</li>
+                        <li style="margin-left: 1.6em;"><em>HEAD: - </em>: -The HEAD method asks for a response identical to that of a GET request, but without the response body.</li>
+                        <li style="margin-left: 1.6em;"><em>PUT: - </em>: - Replaces all current representations of the target resource with the uploaded content.</li>
+                        <li style="margin-left: 1.6em;"><em>CONNECT: - </em>: - The CONNECT method establishes a tunnel to the server identified by the target resource.</li>
+                        <li style="margin-left: 1.6em;"><em>DELETE: - </em>: -Removes all current representations of the target resource given by a URI.</li>
+                        <li style="margin-left: 1.6em;"><em>OPTIONS: - </em>: -The OPTIONS method is used to describe the communication options for the target resource.</li>
+                        <li style="margin-left: 1.6em;"><em>TRACE: - </em>: -The TRACE method performs a message loop-back test along the path to the target resource.</li>
+                        <li style="margin-left: 1.6em;"><em>SAFE AND INDEMPOTENT METHODS: - </em>: -</li>
+                    </ol>
+                </div>
+            </div>
+            <!--long polling vs websockets vs server sent events -->
+            <div class="bigWord ">
+                What are the differences between Long-Polling, Websockets and Server-Sent Events?
+                <div class="defn ">
+                    <ul style="margin:0em;">
+                        In Regular HTTP:
+                        <li style="margin-left: 1.6em;">A client requests a webpage from a server.</li>
+                        <li style="margin-left: 1.6em;">The server calculates the response</li>
+                        <li style="margin-left: 1.6em;">The server sends the response to the client.</li>
+                    </ul>
+                    <ul style="margin:0em;">
+                        Long polling
+                        <li style="margin-left: 1.6em;">The requested webpage executes JavaScript which requests a file from the server.</li>
+                        <li style="margin-left: 1.6em;">The server does not immediately respond with the requested information but waits until there's new information available.</li>
+                        <li style="margin-left: 1.6em;">When there's new information available, the server responds with the new information.</li>
+                        <li style="margin-left: 1.6em;">The client receives the new information and immediately sends another request to the server, re-starting the process. </li>
+                    </ul>
+                    <ul style="margin:0em;">
+                        HTML5 Server Sent Events (SSE) / EventSource:
+                        <li style="margin-left: 1.6em;">The requested webpage executes javascript which<u> opens a connection</u> to the server.</li>
+                        <li style="margin-left: 1.6em;">The server sends an event to the client when there's new information available.</li>
+                        <li style="margin-left: 1.6em;">Real-time traffic from server to client, mostly that's what you'll need</li>
+                        <li style="margin-left: 1.6em;">You'll want to use a server that has an event loop</li>
+                        <li style="margin-left: 1.6em;">Not possible to connect with a server from another domain</li>
+                    </ul>
+                    <ul style="margin:0em;">
+                        HTML5 Websockets:
+                        <li style="margin-left: 1.6em;">The requested webpage executes JavaScript which <u>opens a connection</u> with the server.</li>
+                        <li style="margin-left: 1.6em;">The server and the client can now send each other messages when new data (on either side) is available.</li>
+                        <li style="margin-left: 1.6em;">Real-time traffic from the server to the client and from the client to the server</li>
+                        <li style="margin-left: 1.6em;">You'll want to use a server that has an event loop</li>
+                        <li style="margin-left: 1.6em;"><u>With WebSockets it is possible to connect with a server from another domain.</u></li>
+                        <li style="margin-left: 1.6em;"><u>It is also possible to use a third party hosted websocket server, for example Pusher or others. This way you'll only have to implement the client side, which is very easy!</u></li>
+                    </ul>
+                </div>
+            </div>
+            <!--Workflow of website-->
+            <div class="bigWord WebsiteCommunication">
+                Do your best to describe the process from the time you type in a website's URL to it finishing loading on your screen.
+                <div class="defn WebsiteCommunication">
+                    The Internet is the backbone of the Web, the technical infrastructure that makes the Web possible.
+                    At its most basic, the Internet is a large network of computers which communicate all together.
+                    whenever a browser needs a file hosted on a web server, the browser requests the file via HTTP.
+                    When the request reaches the correct web server (hardware), the HTTP server (software) sends
+                    the requested document back, also through HTTP.
+
+
+                </div>
+            </div>
+            <!--website scrolling performance-->
+            <div class="bigWord WebsiteScrolling">
+                What are some ways you may improve your website's scrolling performance?
+                <div class="defn WebsiteScrolling">
+                    whenever you scroll the browser needs to draw your site or application to the screen.
+                    That means there is the opportunity to minimize the work the browser has to do to get everything drawn and,
+                    by extension, maximize the page performance. Having smooth scrolling is actually an often overlooked but
+                    crucial part of a user's experience when they use your application. When you get the scrolling performance right your application will feel silky smooth and enjoyable to use rather than a clunky and unnatural experience
+                    Websites scrolling performance are impacted by <strong>expensive Styles (example box shadow), Reflows and repaints and Failing to debouncing</strong>
+                    your scroll events.
+                    <veryImportant style=" font-style: italic;display:block; border:0.2em #123456 dashed; padding:0.5em">
+                        Changing the position of the page based on requirment Example <code>position: fixed to position:absolute</code>
+                        miminizing the use of expensive styles like <code>someDiv {box-shadow:rgb(255, 0, 0) 10px 10px inset;}</code>
+
+                    </veryImportant>
+                </div>
+            </div>
+            <!--layout vs painting vs compositing.-->
+            <div class="bigWord ">
+                Explain the difference between layout, painting and compositing
+                <div class="defn ">
+                    Layout:- Browser will determine how much space each element takes up and where to place it.
+                    Painting:-This is the process of filling in pixels. It involves drawing out elements.
+                    Compositing:- Browser draws element to the screen in the correct order so the page renders correctly.
+                    <figure>
+                        <img src="../pics/pixelpipeline.png" alt="pixel pipeline" />
+                        <figcaption>Fig. Pixel Pipeline</figcaption>
+                    </figure>
+
+                    <ul style="margin:0em;">
+                        <li style="margin-left: 1.6em;">
+                            JavaScript Typically JavaScript is used to handle work that will result in visual changes,
+                            whether it’s jQuery’s animate function, sorting a data set, or adding DOM elements to the page.
+                            It doesn’t have to be JavaScript that triggers a visual change, though:
+                            CSS Animations, Transitions, and the Web Animations API are also commonly used.
+                        </li>
+                        <li style="margin-left: 1.6em;">
+                            Style calculations. This is the process of figuring out which CSS rules apply to which elements based on matching
+                            selectors, for example, .headline or .nav > .nav__item. From there, once rules are known, they are applied and
+                            the final styles for each element are calculated.
+                        </li>
+                        <li style="margin-left: 1.6em;">
+                            Layout. Once the browser knows which rules apply to an element it can begin to calculate how much space it takes up
+                            and where it is on screen. The web’s layout model means that one element can affect others, for example the width of
+                            the element typically affects its children’s widths and so on all the way up and down the tree, so the process can be
+                            quite involved for the browser.
+                        </li>
+                        <li style="margin-left: 1.6em;">
+                            Paint. Painting is the process of filling in pixels. It involves drawing out text, colors, images, borders, and shadows,
+                            essentially every visual part of the elements. The drawing is typically done onto multiple surfaces, often called
+                            layers.
+                        </li>
+                        <li style="margin-left: 1.6em;">
+                            Compositing. Since the parts of the page were drawn into potentially multiple layers they need to be drawn to the screen
+                            in the correct order so that the page renders correctly. This is especially important for elements that overlap another,
+                            since a mistake could result in one element appearing over the top of another incorrectly.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--performance bug tools-->
+            <div class="bigWord ">
+                What tools would you use to find a performance bug in your code?
+                <div class="defn ">
+                    Firebug is a Firefox plug-in for web development, also has a profiler for JavaScript.
+                    Firebug is a free and open-source web browser extension for Mozilla Firefox that facilitates the live debugging,
+                    editing, and monitoring of any website's CSS, HTML, DOM, XHR, and JavaScript
+                    Microsoft Visual Studio AJAX Profiling Extensions is a free profiling tool for JavaScript by Microsoft Research.
+                    <veryImportant style=" font-style: italic;display:block; border:0.2em #123456 dashed; padding:0.5em">
+                        Performance bugs lead to reduced throughput(amount of code passing through the system), increased latency(delay from input
+                        to output), and wasted resources in the field. In the past, they have caused several highly publicized failures, causing hundred-million
+                        dollar software projects to be abandoned. The Performance tool gives you insight into your site's general responsiveness, JavaScript and layout performance.
+                        With the Performance tool you create a recording, or profile, of your site over a period of time.
+                        The tool then shows you an overview of the things the browser was doing to render your site over the profile,
+                        and a graph of the frame rate over the profile.
+                    </veryImportant>
+                </div>
+            </div>
+            <!--JavaScript templating - libraries-->
+            <div class="bigWord ">
+                Explain about JavaScript templating?
+                what libraries have you used?
+                <div class="defn ">
+                    JavaScript templates are a method of separating HTML structure from the content contained within.
+                    Example mustache.js
+                    Mustache is a multi-language, logic-less templating system. The mustache.js implementation is just one of many.
+                    So once we’re used to the (very simple) syntax, we can use it in a variety of programming languages.
+                    handlebar, dot, dust etc mustache is the most widely known template
+                </div>
+            </div>
+            <!--Single Page App-->
+            <div class="bigWord ">
+                Explain what a single page app is and how to make one SEO-friendly.
+                <div class="defn ">
+                    Single-Page Applications (SPAs) are Web apps that load a single HTML page and dynamically update that page as the user interacts with the app. SPAs use AJAX and HTML5 to create fluid and responsive Web apps, without constant page reloads. However, this means much of the work happens on the client side, in JavaScript. That means crucial data may not be visible for search engines. The hashtag part is visible to the browser not to the serach engines. These leads to poor search visibility relative to the competitors
+                    <code>
+                        http://localhost:58565/xyzWebsiteEvaluation/seo.html#/problem
+                    </code>
+                    <veryImportant style=" font-style: italic;display:block; border:0.2em #123456 dashed; padding:0.5em">
+                        AJAX and SPA's sites has a well known risks in terms of SEO i.e. indexing and linkability challenges. In order to make SEO friendly
+                        <ul style="margin:0em;">
+                            <li style="margin-left: 1.6em;">
+                                Fallback pages are HTML pages that display if the requesting resource does not parse JavaScript. They are typically static pages that attempt to replicate the functionality and content of the JavaScript web application via server-side rendered pages. These pages hold the same content the Javascript application would show as well as using standard indexable links for navigation.
+                                It can be implemented by using &lt;noscript&gt; tag.
+                            </li>
+                        </ul>
+                    </veryImportant>
+                </div>
+            </div>
+            <!--Testing Codes-->
+            <div class="bigWord Testing">
+                What are some advantages to testing your code?
+                <div class="defn Testing">
+                    Web testing is the name given to software testing that focuses on web applications. Complete testing of a web-based system before going live can help address issues before the system is revealed to the public. Issues such as<strong> the security of the web application, the basic functionality of the site, its accessibility to handicapped users and fully able users, its ability to adapt to the multitude of desktops, devices, and operating systems, as well as readiness for expected traffic and number of users and the ability to survive a massive spike in user traffic, both of which are related to load testing</strong>.
+                    <veryImportant style=" font-style: italic;display:block; border:0.2em #123456 dashed; padding:0.5em">
+                        A web application performance tool (WAPT) is used to test web applications and web related interfaces. These tools are used for performance, load and stress testing of web applications, web sites, web API, web servers and other web interfaces. WAPT tends to simulate virtual users which will repeat either recorded URLs or specified URL and allows the users to specify number of times or iterations that the virtual users will have to repeat the recorded URLs
+                    </veryImportant>
+                </div>
+            </div>
+            <!--Tools to test functionality-->
+            <div class="bigWord FunctionalityTesting">
+                What tools would you use to test your code's functionality?
+                <div class="defn FunctionalityTesting">
+                    Functional testing ensures that individual functions are working well. Test cases should ensure that boundary conditions are tested. Invalid inputs should prompt appropriate error messages. In web applications, functional testing can range from testing whether links are working to checking whether changes made by users in a web page are reflected in the database. Some of the functional tests for web applications include: <strong>Database testing, Configuration testing,Compatibility testing & Flow testing </strong>
+                    Selenium is an open source tool that allows you to perform functional testing for both web application and desktop applications. With help of selenium you can automate browser events and record and replay the script. Working with selenium is very easy. Selenium allows to write scripts using webdriver according to your requirements and run it.
+                </div>
+            </div>
+            <!--Unit test vs Functional test-->
+            <div class="bigWord UnitFunctionalTest">
+                What is the difference between a unit test and a functional/integration test?
+                <div class="defn UnitFunctionalTest">
+                    The primary goal of unit testing is to take the smallest piece of testable software in the application, isolate it from the remainder of the code, and determine whether it behaves exactly as you expect. Each unit is tested separately before integrating them into modules to test the interfaces between modules. Unit testing has proven its value in that a large percentage of defects are identified during its use.
+                    <ul style="margin:0em;">
+                        It has the following advantages:
+                        <li style="margin-left: 1.6em;">Reduces Defects in the Newly developed features or reduces bugs when changing the existing functionality.</li>
+                        <li style="margin-left: 1.6em;">Reduces Cost of Testing as defects are captured in very early phase.</li>
+                        <li style="margin-left: 1.6em;">Improves design and allows better refactoring of code. </li>
+                    </ul>
+                    Upon completion of unit testing, the units or modules are to be integrated which gives raise to integration testing.<strong>The purpose of integration testing is to verify the functional, performance, and reliability between the modules that are integrated.</strong>
+                </div>
+            </div>
+            <!--linting tool-->
+            <div class="bigWord Lint">
+                What is the purpose of a code style linting tool?
+                <div class="defn Lint">
+                    lint or a linter is any tool that flags suspicious usage in software written in any computer language.
+                    Linting tools can significantly help developers to write good quality, optimized code. Linting is a code-checking process that looks for errors in the source code, and flags potential bugs. Most linters use the static code analysis technique, which means the code is checked without being actually executed.
+                </div>
+            </div>
+            <!--Same origin policy with regard to JS-->
+            <div class="bigWord OriginPolicy">
+                Explain the same-origin policy with regards to JavaScript.
+                <div class="defn OriginPolicy">
+                    The same-origin policy restricts how a document or script loaded from one origin can interact with a resource from another origin. It is a critical security mechanism for isolating potentially malicious documents.
+                    <veryImportant style=" font-style: italic;display:block; border:0.2em #123456 dashed; padding:0.5em">
+                        Two pages have the same origin if the protocol(http, https), port (if one is specified), and host(URL) are the same for both pages.
+                    </veryImportant>
+                    An origin is defined by the scheme, host, and port of a URL. Generally speaking, documents retrieved from distinct origins are isolated from each other.
+                </div>
+            </div>
+            <!--Global Scope-->
+            <div class="bigWord GlobalScopeConflict">
+                Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
+                <div class="defn GlobalScopeConflict">
+                    to reduce conflicts and to simplify maintenance
+                </div>
+            </div>
+            <!--Load Event-->
+            <div class="bigWord LoadEvent">
+                Why would you use something like the load event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
+                <div class="defn LoadEvent">
+
+                </div>
+            </div>
+            <!--document load event vs document ready event-->
+            <div class="bigWord LoadReadyEvent">
+                Difference between document load event and document ready event?
+                <div class="defn LoadReadyEvent">
+                    The load event is fired when a resource and its dependent resources have finished loading. While the ready event is fired a little bit earlier
+                    <code>
+                        &lt;script&gt;
+                        window.addEventListner("load",function(event){
+                        console.log("run after all resources are loaded!!!");
+                        });
+                        &lt;/script&gt;
+                    </code>
+                    The ready event occurs after the HTML document has been loaded, while the onload event occurs later, when all content (e.g. images) also has been loaded. The onload event is a standard event in the DOM, while the ready event is specific to jQuery. The purpose of the ready event is that it should occur as early as possible after the document has loaded, so that code that adds functionality to the elements in the page doesn't have to wait for all content to load.
+                </div>
+            </div>
+            <!--Extending Builtin JS Objects-->
+            <div class="bigWord ExtendBuiltIn">
+                Why is extending built-in JavaScript objects not a good idea?
+                <div class="defn ExtendBuiltIn">
+                    When you extend an object, you change its behaviour. Changing the behaviour of an object that will only be used by your own code is fine. But when you change the behaviour of something that is also used by other code there is a risk you will break that other code.
+                </div>
+            </div>
+            <!--"use strict"-->
+            <div class="bigWord UseStrict">
+                What is "use strict";? what are the advantages and disadvantages to using it?
+                <div class="defn UseStrict">
+                    Strict Mode is a new feature in ECMAScript 5 that allows you to place a program, or a function, in a “strict” operating context. This strict context <strong> prevents certain actions from being taken and throws more exceptions </strong> (generally providing the user with more information and a tapered-down coding experience). Since ECMAScript 5 is backwards-compatible with ECMAScript 3, all of the “features” that were in ECMAScript 3 that were “deprecated” are just disabled (or throw errors) in strict mode, instead.
+                    <ul style="margin:0em;">
+                        Strict mode helps out in a couple ways:
+                        <li style="margin-left: 1.6em;">It catches some common coding bloopers, throwing exceptions.</li>
+                        <li style="margin-left: 1.6em;">It prevents, or throws errors, when relatively “unsafe” actions are taken (such as gaining access to the global object).</li>
+                        <li style="margin-left: 1.6em;">It disables features that are confusing or poorly thought out </li>
+                    </ul>
+                    In general Strict mode makes several changes to normal JavaScript semantics. First, strict mode eliminates some JavaScript silent errors by changing them to throw errors. Second, strict mode fixes mistakes that make it difficult for JavaScript engines to perform optimizations: strict mode code can sometimes be made to run faster than identical code that's not strict mode. Third, strict mode prohibits some syntax likely to be defined in future versions of ECMAScript.
+                    <code>
+                        (function(){
+                        "use strict"; <br />
+                        //Define your library strictly
+                        })();
+                    </code>
+                    Its disadvantage is Browsers not supporting strict mode will run strict mode code with different behavior from browsers that do, so don't rely on strict mode without feature-testing for support for the relevant aspects of strict mode.
+                </div>
+            </div>
+            <!--==vs===-->
+            <div class="bigWord ">
+                What is the difference between == and ===?
+                <div class="defn ">
+                    In JavaScript there are two sets of equality operators. First === or !== these operator compares both the value and type. For instance
+                    <code>
+                        "10"===10; <output style=" color:#000fff; display:inline; font-style: italic;">false</output>
+                        10===10; <output style=" color:#000fff; display:inline; font-style: italic;">true</output>
+                    </code>
+                    On the other hand == or != compares only the value.
+                    <code>
+                        "10"===10; <output style=" color:#000fff; display:inline; font-style: italic;">true</output>
+                        10===10; <output style=" color:#000fff; display:inline; font-style: italic;">true</output>
+                    </code>
+                </div>
+            </div>
+            <!--Ternary Expression-->
+            <div class="bigWord ">
+                Why is it called a Ternary expression, what does the word "Ternary" indicate?
+                <div class="defn ">
+                    The conditional (ternary) operator is the only JavaScript operator that takes three operands. The name ternary means composed of three parts. This operator is frequently used as a shortcut for the if statement. Syntax
+                    <code>
+                        condition ? expr1 : expr2 <br />
+                        x >= y ? "too high" : "too low"
+                    </code>
+                    condition is an expression that evaluates either true or false. expr :  -expressions with values of any type.
+                </div>
+            </div>
+            <!--attribute vs property-->
+            <div class="bigWord ">
+                What's the difference between an "attribute" and a "property"?
+                <div class="defn ">
+                    An HTML attribute is a modifier of an HTML element type. An attribute either modifies the default functionality of an element type or provides functionality to certain element types unable to function correctly without them. In HTML syntax, an attribute is added to an HTML start tag.
+                    Example
+                    <code>
+                        &lt;p align="right"&gt;some text &lt;/p&gt;
+                    </code>
+                    JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a property is an association between a name (or key) and a value. A property's value can be a function, in which case the property is known as a method.
+
+                    <code>
+                        var objectName = {<br />
+                        property1:'someStringValue',<br /> property2:4,<br />property3:someFunction(){<br />
+                        otherProperty:"someOtherValue"<br />}<br />}
+                    </code>
+                </div>
+            </div>
+            <!--SyntaxParser-->
+            <div class="bigWord SyntaxParser">
+                What is Syntax Parser?
+                <div class="defn SyntaxParser">
+                    A program that reads your code and determines what it does and if its grammer is valid
+                </div>
+            </div>
+            <!--JSONP-->
+            <div class="bigWord ">
+                Explain how JSONP works (and how it's not really AJAX)
+                <div class="defn ">
+                    JSONP (JSON with Padding or JSON-P[1]) is a technique used by web developers to bypass the restrictions of browsers' same-origin policy.
+                </div>
+            </div>
+            <!--writing JavaScript code in a language that compiles to JavaScript    -->
+            <div class="bigWord ">
+                What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
+                <div class="defn ">
+
+                </div>
+            </div>
+            <!--promise defn-->
+            <div class="bigWord Promise">
+                What are promises?
+                <div class="defn Promise">
+                    The Promise object is used for asynchronous computations. A Promise represents a value which may be available
+                    <em>now,or in the future, or never</em>. Syntax <code> new Promise( /* executor */ function(resolve, reject) { ... } );</code>
+                    <veryImportant style=" font-style: italic;display:block; border:0.2em #123456 dashed; padding:0.5em">
+                        executor: - A function that is passed with the arguments resolve and reject. The executor function is executed immediately
+                        by the Promise implementation, passing resolve and reject functions (the executor is called before the Promise constructor
+                        even returns the created object). The resolve and reject functions, when called, resolve or reject the promise, respectively.
+                        The executor normally initiates some asynchronous work, and then, once that completes, either calls the resolve function to
+                        resolve the promise or else rejects it if an error occurred. If an error is thrown in the executor function, the promise is
+                        rejected. The return value of the executor is ignored.
+                    </veryImportant>
+                    A Promise is a proxy/representative for a value not necessarily known when the promise is created. It allows you to associate
+                    handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values
+                    like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply
+                    the value at some point in the future.
+                </div>
+            </div>
+            <!--promise states-->
+            <div class="bigWord PromiseStates">
+                What are the states of a promise?
+                <div class="defn PromiseStates">
+                    <ul style="margin:0em;">
+                        <li style="margin-left: 1.6em;"><strong>pending: - </strong> initial state, not fulfilled or rejected </li>
+                        <li style="margin-left: 1.6em;"><strong>fulfilled: - </strong> the operation completed succesfully</li>
+                        <li style="margin-left: 1.6em;"><strong>rejected: - </strong>the operation failed</li>
+                    </ul>
+                    A pending promise can either be fulfilled with a value, or rejected with a reason (error).
+                    When either of these happens, the associated handlers queued up by a promise's then method are called.
+                </div>
+            </div>
+            <!--Promise.prototype.then method-->
+            <div class="bigWord PromisethenMethod">
+                Explain Promise.prototype.then() methods in detail
+                <div class="defn PromisethenMethod">
+                    The then() method returns a <strong>Promise</strong>. It takes up to two arguments:
+                    <em>callback functions for the success</em> and <em>failure cases of the Promise</em>.
+                    Syntax<code>
+                        p.then(function(value){//fullfillment},function(reason){//rejection});
+                        p.then(onFulfilled[, onRejected]);
+                    </code>Example
+                    <code>
+                        var p1 = new Promise(function(resolve, reject) { resolve('Success!'); // or  // reject ("Error!"); });
+                        p1.then(function(value) {<br />  console.log(value); // Success!<br />}, function(reason) { <br /> console.log(reason); // Error!<br />});
+                    </code>
+                </div>
+            </div>
+            <!--Promise.prototype.catch method-->
+            <div class="bigWord PromisecatchMethod">
+                Explain Promise.prototype.catch() methods in detail
+                <div class="defn PromisecatchMethod">
+                    The catch() method returns a Promise and deals with rejected cases only. It behaves the same as calling
+                    Promise.prototype.then(undefined, onRejected). Syntax
+                    <code>p.catch(onRejected); p.catch(function(reason) {   // rejection });</code>
+                    <veryImportant style=" font-style: italic;display:block; border:0.2em #123456 dashed; padding:0.5em">
+                        onRejected function called when the Promise is rejected. This function has one argument:reason i.e. the rejection reason.
+                        The Promise returned by catch() is rejected if onRejected throws an error or returns a Promise which is itself rejected;
+                        otherwise, it is resolved.
+                    </veryImportant>
+                    The catch method can be useful for error handling in your promise composition.
+                </div>
+            </div>
+            <!--promise composition-->
+            <div class="bigWord PromiseComposition">
+                Explain Promise composition in detail
+                <div class="defn PromiseComposition">
+
+                </div>
+            </div>
+            <!--Promises and/or their polyfills?-->
+            <div class="bigWord PromisePolyfills">
+                What is the extent of your experience with Promises and/or their polyfills?
+                <div class="defn PromisePromisePolyfills">
+                    promises are enabled by default, as of Chrome 32, Opera 19, Firefox 29, Safari 8 & Microsoft Edge. ES6-promise (subset of rsvp.js)
+                    is a polyfill for ES6 promise
+                    <u>A polyfill, or polyfiller, is a piece of code (or plugin) that provides the technology that you, the developer, expect the browser to provide natively.</u>
+                </div>
+            </div>
+            <!--promise vs callbacks-->
+            <div class="bigWord PromiseCallbacks">
+                What are the pros and cons of using Promises instead of callbacks?
+                <div class="defn PromiseCallbacks">
+                    A callback function is a function which passed as an argument to another function, and, is invoked after some kind of event.
+                </div>
+            </div>
+            <!--ajax dfn-->
+            <div class="bigWord">
+                What is ajax?
+                <div class="defn">
+                    AJAX stands for Asynchronous JavaScript and XML. In a nutshell, it is <em>
+                        the use of the XMLHttpRequest object to communicate
+                        with server-side scripts.
+                    </em> It can send as well as receive information in a variety of formats, including JSON, XML, HTML,
+                    and even text files. AJAX’s most appealing characteristic, however, is its "asynchronous" nature, which means it can do
+                    all of this without having to refresh the page
+                </div>
+            </div>
+            <!--ajax features-->
+            <div class="bigWord">
+                What are the basic features of AJAX?
+                <div class="defn">
+                    <ul style="margin:0em;">
+                        <li style="margin-left: 1.6em;">make requests to the server with out reloading the page</li>
+                        <li style="margin-left: 1.6em;">Receive and work with data from the server</li>
+                    </ul>
+
+                </div>
+            </div>
+            <!--XMLHttpRequest-->
+            <div class="bigWord">
+                How to make an http request?
+                <div class="defn">
+                    <strong>XMLHttpRequest</strong> is an api that makes http request to the server by using JavaScript.
+                    <code>
+                        if(window.XmlHttpRequest){
+                        xmlRequest = new XMLHttpRequest();
+                        }else{ if (window.ActiveXObject) { // IE 6 and older
+                        httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                    </code>
+                    The <strong>onreadystatechange</strong> property of the object handles the server response. This is done by setting the onreadystatechange
+                    property of the object to the name of the JavaScript function that should be called when the state of the request changes.
+                    <code>
+                        httpRequest.onreadystatechange = nameOfTheFunction; <br />
+                        httpRequest.onreadystatechange = function(){
+                        // process the server response
+                        };
+                    </code>
+                    After you declare the function you need to call the open and send methods of the XMLHttpRequest request class.
+                    <code>
+                        httpRequest.open('GET', 'http://www.example.org/some.file', true);
+                        httpRequest.send(null);
+
+                    </code>
+                    <strong>GET, POST or HEAD (first parameter): -</strong> httprequest methods <strong>second parameter</strong> url of the page you are requesting
+                    <strong>Third parameter</strong> sets wheather the request is asynchronous or not
+
+
+
+                </div>
+            </div>
+        </article>
+    </section>
+</body>
+</html>
